@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cherry Blossom Planner</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div class="hero-copy">
+                <h1>Cherry Blossom <span>daily planner</span></h1>
+        <p>um planner para voce organizar sua vida</p>
+      </div>
+      <div class="hero-badge">
+        <div class="time" id="live-time">00:00</div>
+        <div class="date" id="live-date">domingo, 19 de abril</div>
+      </div>
+    </section>
+
+    <section class="dashboard">
+      <div class="left-column">
+        <article class="card">
+          <div class="ribbon"></div>
+          <div class="card-header">
+            <div>
+              <div class="panel-tag">Checklist do dia</div>
+              <h2>Lista de tarefas</h2>
+              <p>Adicione atividades rápidas e marque o que já foi concluído.</p>
+            </div>
+          </div>
+
+          <form class="task-form" id="task-form">
+            <input id="task-input" type="text" placeholder="Adicionar nova tarefa">
+            <button class="accent-button" type="submit" aria-label="Adicionar tarefa">+</button>
+          </form>
+
+          <ul class="task-list" id="task-list"></ul>
+
+          <div class="stats">
+            <div class="stat">
+              <strong id="task-total">0</strong>
+              <span>Tarefas criadas</span>
+            </div>
+            <div class="stat">
+              <strong id="task-progress">0%</strong>
+              <span>Concluído hoje</span>
+            </div>
+          </div>
+          <div class="spark">✧</div>
+        </article>
+
+        <article class="card">
+          <div class="card-header">
+            <div>
+              <div class="panel-tag">Notas importantes</div>
+              <h2>Lembretes</h2>
+              <p>Guarde avisos e pequenos recados para não esquecer depois.</p>
+            </div>
+          </div>
+
+          <form id="reminder-form">
+            <div class="reminder-form">
+              <input id="reminder-title" type="text" placeholder="Título do lembrete">
+              <textarea id="reminder-text" placeholder="Escreva algo importante aqui..."></textarea>
+            </div>
+            <div class="reminder-actions">
+              <button class="accent-button" type="submit" aria-label="Adicionar lembrete">+</button>
+            </div>
+          </form>
+
+          <ul class="reminder-list" id="reminder-list"></ul>
+        </article>
+      </div>
+
+      <div class="right-column">
+        <article class="card">
+          <div class="card-header">
+            <div>
+              <div class="panel-tag">Agenda do mês</div>
+              <h2>Calendário</h2>
+              <p>Clique em qualquer dia para visualizar a seleção atual.</p>
+            </div>
+          </div>
+
+          <div class="calendar-shell">
+            <div class="calendar-top">
+              <div class="calendar-title" id="calendar-title">abril 2026</div>
+              <div class="calendar-nav">
+                <button type="button" id="prev-month" aria-label="Mês anterior">‹</button>
+                <button type="button" id="next-month" aria-label="Próximo mês">›</button>
+              </div>
+            </div>
+
+            <div class="weekdays">
+              <span>Dom</span>
+              <span>Seg</span>
+              <span>Ter</span>
+              <span>Qua</span>
+              <span>Qui</span>
+              <span>Sex</span>
+              <span>Sáb</span>
+            </div>
+
+            <div class="calendar-grid" id="calendar-grid"></div>
+
+            <div class="selected-date-card">
+              <strong id="selected-date-label">Data selecionada</strong>
+              <p id="selected-date-copy">Escolha um dia no calendário para destacar compromissos, planos ou lembretes visuais.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
